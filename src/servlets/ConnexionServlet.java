@@ -45,6 +45,13 @@ if(us.existe(email, password))
 {
 response.sendRedirect("Profile.jsp");	
 }
+else
+{
+	String message="compte non reconnu";
+	request.setAttribute("erreur",message);
+request.getRequestDispatcher("index.jsp").forward(request, response);	
+
+}
 	}
 
 }

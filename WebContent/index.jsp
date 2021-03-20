@@ -28,6 +28,8 @@
 
   <button type="submit" class="btn btn-primary">Se connecter</button>
   <br> <a href="Inscription.jsp">s'inscrire</a>
+  <br>
+ <% if(request.getAttribute("erreur")!=null) { %> <span class="label label-danger"><%=request.getAttribute("erreur") %></span> <% } %>
 </form>    </div>
     <div class="col-sm">
     </div>
