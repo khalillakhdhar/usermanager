@@ -14,7 +14,7 @@
     <div class="col-sm">
     </div>
     <div class="col-sm">
-<form>
+<form method="post" action="ConnexionServlet">
   <div class="mb-3">
   <p align="center"><h1>Connexion</h1></p>
     <label for="exampleInputEmail1" class="form-label">Email </label>

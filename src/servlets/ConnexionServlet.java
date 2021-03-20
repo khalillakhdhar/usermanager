@@ -7,20 +7,19 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import classes.User;
 import classes.Users;
 
 /**
- * Servlet implementation class InscriptionSevlet
+ * Servlet implementation class ConnexionServlet
  */
-@WebServlet("/InscriptionSevlet")
-public class InscriptionSevlet extends HttpServlet {
+@WebServlet("/ConnexionServlet")
+public class ConnexionServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public InscriptionSevlet() {
+    public ConnexionServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -39,19 +38,13 @@ public class InscriptionSevlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		//doGet(request, response);
-		String nom=request.getParameter("nom");
-		String prenom=request.getParameter("prenom");
-		String adresse=request.getParameter("adresse");
-		String profession=request.getParameter("profession");
-	
-		int age=Integer.parseInt(request.getParameter("age"));
 		String email=request.getParameter("mail");
 		String password=request.getParameter("pass");
 		Users us=new Users();
-
-		User u=new User(nom, prenom, adresse, profession, email, password, age);
-		us.add(u);
-		response.sendRedirect("index.jsp");
+if(us.existe(email, password))
+{
+response.sendRedirect("Profile.jsp");	
+}
 	}
 
 }
