@@ -9,6 +9,11 @@
 <title>Insert title here</title>
 </head>
 <body>
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+    </div>
+    <div class="col-sm">
 <form>
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Email address</label>
@@ -24,7 +29,12 @@
     <label class="form-check-label" for="exampleCheck1">Check me out</label>
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
-</form>
+</form>    </div>
+    <div class="col-sm">
+    </div>
+  </div>
+</div>
+
 
 </body>
 <!-- JavaScript Bundle with Popper -->
