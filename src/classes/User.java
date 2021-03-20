@@ -55,5 +55,10 @@ public User(String nom, String prenom, String adresse, String profession, String
 	this.password = password;
 	this.age = age;
 }
+@Override
+public String toString() {
+	return "User [nom=" + nom + ", prenom=" + prenom + ", adresse=" + adresse + ", profession=" + profession
+			+ ", email=" + email + ", password=" + password + ", age=" + age + "]";
+}
 
 }

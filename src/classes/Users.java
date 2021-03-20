@@ -16,7 +16,23 @@ public static ArrayList<User> getMylist() {
 public static void setMylist(ArrayList<User> mylist) {
 	Users.mylist = mylist;
 }
+public boolean existe(String mail,String password)
+{
+boolean b=false;
 
+for(User x: Users.mylist)
+{
+if(x.getEmail().equals(mail)&&(x.getPassword().equals(password)))
+{
+b=true;
+break;
+
+}
+
+}
+
+return b;
+}
 
 
 }
