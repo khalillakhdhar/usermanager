@@ -14,7 +14,7 @@
     <div class="col-sm">
     </div>
     <div class="col-sm">
-<form>
+<form action="InscriptionSevlet" method="post">
   <div class="mb-3">
   <p align="center"><h1>S'inscrire</h1></p>
     <label for="nom" class="form-label">nom </label>
