@@ -3,12 +3,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-
 <meta charset="ISO-8859-1">
-<title>Inscription</title>
+<title>Insert title here</title>
 </head>
 <body>
+<jsp:include page="menu.jsp"></jsp:include>
+
 <div class="container">
   <div class="row">
     <div class="col-sm">
@@ -16,8 +16,8 @@
     <div class="col-sm">
 <form action="InscriptionSevlet" method="post">
   <div class="mb-3">
-  <p align="center"><h1>S'inscrire</h1></p>
-  <input type="hidden" name="origine" value="inscrire">
+  <input type="hidden" name="origine" value="ajout">
+  <p align="center"><h1>Ajouter</h1></p>
     <label for="nom" class="form-label">nom </label>
     <input type="text" name="nom" class="form-control">
   </div>
@@ -47,12 +47,10 @@
   </div>
 
   <button type="submit" class="btn btn-primary">S'inscrire</button>
-  <br> <a href="index.jsp">déjà membre?</a>
 </form>    </div>
     <div class="col-sm">
     </div>
   </div>
 </div>
-
 </body>
 </html>

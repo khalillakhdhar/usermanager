@@ -41,8 +41,9 @@ public class ConnexionServlet extends HttpServlet {
 		String email=request.getParameter("mail");
 		String password=request.getParameter("pass");
 		Users us=new Users();
-if(us.existe(email, password))
+if(us.exist(email, password)!=null)
 {
+	request.getSession().setAttribute("cuser", us.exist(email, password));;
 response.sendRedirect("Profile.jsp");	
 }
 else

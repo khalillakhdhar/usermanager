@@ -1,3 +1,4 @@
+<%@page import="classes.User"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -7,6 +8,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+<% User u=(User) session.getAttribute("cuser");%>
+<h1>Profile de <%=u.getNom()+" "+u.getPrenom() %></h1>
 </body>
 </html>

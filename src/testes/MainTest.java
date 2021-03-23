@@ -18,8 +18,8 @@ System.out.println(x.toString());
 }
 
 
-boolean tst=us.existe("test2@gmail.com", "teste2");
-System.out.println(tst);
+//boolean tst=us.existe("test2@gmail.com", "teste2");
+//System.out.println(tst);
 	}
 
 }

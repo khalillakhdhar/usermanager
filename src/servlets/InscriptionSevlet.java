@@ -1,6 +1,8 @@
 package servlets;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -30,7 +32,13 @@ public class InscriptionSevlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		PrintWriter out=response.getWriter();
+
+		out.print("Served at: "+request.getContextPath());
+		int index=Integer.parseInt(request.getParameter("index"));
+		out.print(index);
+		Users.delete(index);
+		response.sendRedirect("list.jsp");
 	}
 
 	/**
@@ -43,7 +51,8 @@ public class InscriptionSevlet extends HttpServlet {
 		String prenom=request.getParameter("prenom");
 		String adresse=request.getParameter("adresse");
 		String profession=request.getParameter("profession");
-	
+		String page=request.getParameter("origine");
+
 		int age=Integer.parseInt(request.getParameter("age"));
 		String email=request.getParameter("mail");
 		String password=request.getParameter("pass");
@@ -51,7 +60,11 @@ public class InscriptionSevlet extends HttpServlet {
 
 		User u=new User(nom, prenom, adresse, profession, email, password, age);
 		us.add(u);
+		if(page=="inscrire")
 		response.sendRedirect("index.jsp");
+		else
+			response.sendRedirect("ajout.jsp");
+
 	}
 
 }

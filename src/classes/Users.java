@@ -16,7 +16,7 @@ public static ArrayList<User> getMylist() {
 public static void setMylist(ArrayList<User> mylist) {
 	Users.mylist = mylist;
 }
-public boolean existe(String mail,String password)
+public User exist(String mail,String password)
 {
 boolean b=false;
 
@@ -24,15 +24,23 @@ for(User x: Users.mylist)
 {
 if(x.getEmail().equals(mail)&&(x.getPassword().equals(password)))
 {
-b=true;
-break;
+return x;
 
 }
 
 }
 
-return b;
+return null;
 }
+public static void delete(int index)
+{
+	Users.mylist.remove(index);
+	
 
 
+}
+public static User findbyId(int index)
+{
+return Users.mylist.get(index);	
+}
 }
