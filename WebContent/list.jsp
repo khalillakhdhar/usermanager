@@ -9,6 +9,24 @@
 <html>
 <head>
 <%
+String role="user";
+if(session.getAttribute("cuser")==null)
+	{response.sendRedirect("index.jsp");
+}
+else
+{
+User u=(User) session.getAttribute("cuser");
+
+ role=u.getProfession();
+ if(!role.equals("administrateur"))
+ {
+	 
+	 response.sendRedirect("Profile.jsp");
+	 
+ }
+}
+%>
+<%
 
 ArrayList<User> list=Users.mylist;
 request.setAttribute("list",list);  
