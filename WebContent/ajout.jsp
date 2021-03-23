@@ -46,7 +46,7 @@
     <input type="password" name="pass" class="form-control" id="exampleInputPassword1">
   </div>
 
-  <button type="submit" class="btn btn-primary">S'inscrire</button>
+  <button type="submit" class="btn btn-primary">ajouter</button>
 </form>    </div>
     <div class="col-sm">
     </div>

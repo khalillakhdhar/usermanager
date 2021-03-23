@@ -60,7 +60,7 @@ public class InscriptionSevlet extends HttpServlet {
 
 		User u=new User(nom, prenom, adresse, profession, email, password, age);
 		us.add(u);
-		if(page=="inscrire")
+		if(page.equals("inscrire"))
 		response.sendRedirect("index.jsp");
 		else
 			response.sendRedirect("ajout.jsp");

@@ -18,7 +18,6 @@ public static void setMylist(ArrayList<User> mylist) {
 }
 public User exist(String mail,String password)
 {
-boolean b=false;
 
 for(User x: Users.mylist)
 {

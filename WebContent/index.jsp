@@ -18,8 +18,7 @@
   <div class="mb-3">
   <p align="center"><h1>Connexion</h1></p>
     <label for="exampleInputEmail1" class="form-label">Email </label>
-    <input type="email" name="mail" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+    <input type="email" name="mail" class="form-control" id="exampleInputEmail1" >
   </div>
   <div class="mb-3">
     <label for="exampleInputPassword1" class="form-label">Mot de passe</label>
@@ -29,7 +28,7 @@
   <button type="submit" class="btn btn-primary">Se connecter</button>
   <br> <a href="Inscription.jsp">s'inscrire</a>
   <br>
- <% if(request.getAttribute("erreur")!=null) { %> <span class="label label-danger"><%=request.getAttribute("erreur") %></span> <% } %>
+ <% if(request.getAttribute("erreur")!=null) { %> <span class="badge bg-danger"><%=request.getAttribute("erreur") %></span> <% } %>
 </form>    </div>
     <div class="col-sm">
     </div>
